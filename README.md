@@ -22,7 +22,5 @@ You need to copy the following assets from the folder metronic_v2.0.2\admin\temp
       - jquery.blockui.min.js
       - jquery.cokie.min.js
 
-
-
-
-
+Make sure to set the directories to 'ignore' so that the assets aren't uploaded to the 
+GitHub repository. We don't want to have material there that cannot be re-distibuted!
