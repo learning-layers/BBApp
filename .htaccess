@@ -3,6 +3,9 @@
 DirectoryIndex login.html
 Options -Indexes
 
+redirect 301 /index.html http://learning-toolbox.glyn.in/home-context-my-toolbox.html
+redirect 301 /home.html http://learning-toolbox.glyn.in/home-context-my-toolbox.html
+
 # STRONG HTACCESS PROTECTION
 <Files ~ "^.*\.([Hh][Tt][Aa])">
  order allow,deny
