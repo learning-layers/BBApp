@@ -7,7 +7,7 @@ You need to copy the following assets from the folder metronic_v2.0.2\admin\temp
    - All files from 'css' to 'Learning Toolbox\Source Files\assets\css'
    - All files from 'img' to 'Learning Toolbox\Source Files\assets\img'
    - All files from 'scripts' to 'Learning Toolbox\Source Files\assets\scripts'
-   - The **BUT** following files and folders from 'plugins'
+   - The **BUT** the following files and folders from 'plugins'
       - bootstrap
       - bootstrap-hover-dropdown
       - font-awesome
