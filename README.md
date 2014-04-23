@@ -3,7 +3,7 @@ LearningToolbox
 
 The current version of the Learning Toolbox works with the Metronic reponsive template version 2.0.2.
 
-You need to copy the following assets from the folder ```metronic_v2.0.2\admin\template\assets``` to the Netbeans project:
+You need to copy the following assets from the folder ```metronic_v2.0.2\admin\template\assets``` to the Eclipse project:
    - All files from ```css``` to ```Learning Toolbox\Source Files\assets\css```
    - All files from ```img``` to ```Learning Toolbox\Source Files\assets\img```
    - All files from ```scripts``` to ```Learning Toolbox\Source Files\assets\scripts```
