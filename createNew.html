@@ -92,15 +92,14 @@ License: You must have a valid license purchased only from themeforest(the above
 										<label for="collectionName">Enter the name of the Collection</label>
 										<input type="text" class="form-control" id="collectionName" placeholder="">
 										<span class="help-block">
-											Enter the name of the catagory above
+											Enter in what you would like for your collection to be called
 										</span>
 									</div>
-									<div class="form-group">
-										<label class="control-label col-md-3">Tags</label>
-										
-											<input id="tags_1" type="text" class="form-control tags" value="foo,bar,baz,roffle"/>
-										
-									</div>
+	
+									
+										<p><label>Tags:</label>
+										<input id="tags_1" type="text" class="tags" value="learning-toolbox," /></p>
+														
 								
 								</div>
 									<div class="form-actions">
@@ -161,6 +160,28 @@ jQuery(document).ready(function() {
    App.init();
 });
 </script>
+<script type="text/javascript">
+		
+		function onAddTag(tag) {
+			alert("Added a tag: " + tag);
+		}
+		function onRemoveTag(tag) {
+			alert("Removed a tag: " + tag);
+		}
+		
+		function onChangeTag(input,tag) {
+			alert("Changed a tag: " + tag);
+		}
+		
+		$(function() {
+
+			$('#tags_1').tagsInput({width:'auto'});
+
+
+
+		});
+	
+	</script>
 <!-- END JAVASCRIPTS -->
 </body>
 <!-- END BODY -->
