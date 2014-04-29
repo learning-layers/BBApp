@@ -93,7 +93,7 @@ License: You must have a valid license purchased only from themeforest(the above
             <!-- BEGIN PAGE CONTENT-->
 
 					<!-- BEGIN SAMPLE FORM PORTLET-->
-					<div class="portlet box blue">
+					<div class="portlet box red">
 						<div class="portlet-title">
 							<div class="caption">
 								<i class="fa fa-reorder"></i> Make a Suggestion!
@@ -110,166 +110,51 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 						</div>
 						<div class="portlet-body form">
-							<form role="form">
+							<form action="trying-podio-add-suggestion.php" method="post" enctype="multipart/form-data">
 								<div class="form-body">
 									<div class="form-group">
-										<label for="exampleInputEmail1">Subject</label>
-										<input type="email" class="form-control" id="exampleInputEmail1" placeholder="A short name for your suggestion">
+										<label for="subject">Subject</label>
+										<input type="text" class="form-control" name="formSubject" id="subject" placeholder="A short name for your suggestion">
 										<span class="help-block">
-											 The subject will help you identify your suggestion in the table 'My Suggestions'.
+											 The subject will help you identify your suggestion in the table 'My Suggestions'
 										</span>
 									</div>
 									<div class="form-group">
 										<label>Nature of your suggestion</label>
-										<select class="form-control">
-											<option>Question</option>
-											<option>Suggestion</option>
-											<option>Problem</option>
+										<select class="form-control" name="formNature">
+											<option value = "Question">Question</option>
+											<option value = "Suggestion">Suggestion</option>
+											<option value = "Problem">Problem</option>
 										</select>
 									</div>
 									<div class="form-group">
 										<label>Description</label>
-										<textarea class="form-control" rows="3"></textarea>
+										<textarea class="form-control" rows="3" name="formDesc"></textarea>
 									</div>
 									<div class="form-group">
 										<label>Status</label>
-										<select class="form-control">
-											<option>Open</option>
-											<option>Pending</option>
-											<option>Solved</option>
+										<select class="form-control" name="formStatus">
+											<option value = "Open">Open</option>
+											<option value = "Pending">Pending</option>
+											<option value = "Solved">Solved</option>
 										</select>
 									</div>
 									<div class="form-group">
-										<label>Email Address</label>
-										<div class="input-group">
-											<span class="input-group-addon">
-												<i class="fa fa-envelope"></i>
-											</span>
-											<input type="text" class="form-control" placeholder="Email Address">
-										</div>
-									</div>
-									<div class="form-group">
-										<label for="exampleInputPassword1">Password</label>
-										<div class="input-group">
-											<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-											<span class="input-group-addon">
-												<i class="fa fa-user"></i>
-											</span>
-										</div>
-									</div>
-									<div class="form-group">
-										<label>Left Icon</label>
-										<div class="input-icon">
-											<i class="fa fa-bell-o"></i>
-											<input type="text" class="form-control" placeholder="Left icon">
-										</div>
-									</div>
-									<div class="form-group">
-										<label>Right Icon</label>
-										<div class="input-icon right">
-											<i class="fa fa-microphone"></i>
-											<input type="text" class="form-control" placeholder="Right icon">
-										</div>
-									</div>
-									<div class="form-group">
-										<label>Input With Spinner</label>
-										<input class="form-control spinner" type="text" placeholder="Process something"/>
-									</div>
-									<div class="form-group">
-										<label>Static Control</label>
-										<p class="form-control-static">
-											 email@example.com
-										</p>
-									</div>
-									<div class="form-group">
-										<label>Disabled</label>
-										<input type="text" class="form-control" placeholder="Disabled" disabled>
-									</div>
-									<div class="form-group">
-										<label>Readonly</label>
-										<input type="text" class="form-control" placeholder="Readonly" readonly>
-									</div>
-									<div class="form-group">
-										<label>Dropdown</label>
-										<select class="form-control">
-											<option>Option 1</option>
-											<option>Option 2</option>
-											<option>Option 3</option>
-											<option>Option 4</option>
-											<option>Option 5</option>
-										</select>
-									</div>
-									<div class="form-group">
-										<label>Multiple Select</label>
-										<select multiple class="form-control">
-											<option>Option 1</option>
-											<option>Option 2</option>
-											<option>Option 3</option>
-											<option>Option 4</option>
-											<option>Option 5</option>
-										</select>
-									</div>
-									<div class="form-group">
-										<label>Textarea</label>
-										<textarea class="form-control" rows="3"></textarea>
-									</div>
-									<div class="form-group">
-										<label for="exampleInputFile1">File input</label>
-										<input type="file" id="exampleInputFile1">
+										<label for="exampleInputFile1">Attachments</label>
+										<input type="file" id="exampleInputFile1" name="formFile">
 										<p class="help-block">
-											 some help text here.
+											 You can upload files with more details about your suggestion
 										</p>
-									</div>
-									<div class="form-group">
-										<label>Checkboxes</label>
-										<div class="checkbox-list">
-											<label>
-											<input type="checkbox"> Checkbox 1 </label>
-											<label>
-											<input type="checkbox"> Checkbox 2 </label>
-											<label>
-											<input type="checkbox" disabled> Disabled </label>
-										</div>
-									</div>
-									<div class="form-group">
-										<label>Inline Checkboxes</label>
-										<div class="checkbox-list">
-											<label class="checkbox-inline">
-											<input type="checkbox" id="inlineCheckbox1" value="option1"> Checkbox 1 </label>
-											<label class="checkbox-inline">
-											<input type="checkbox" id="inlineCheckbox2" value="option2"> Checkbox 2 </label>
-											<label class="checkbox-inline">
-											<input type="checkbox" id="inlineCheckbox3" value="option3" disabled> Disabled </label>
-										</div>
-									</div>
-									<div class="form-group">
-										<label>Radio</label>
-										<div class="radio-list">
-											<label>
-											<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> Option 1</label>
-											<label>
-											<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> Option 2 </label>
-											<label>
-											<input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled> Disabled </label>
-										</div>
-									</div>
-									<div class="form-group">
-										<label>Inline Radio</label>
-										<div class="radio-list">
-											<label class="radio-inline">
-											<input type="radio" name="optionsRadios" id="optionsRadios4" value="option1" checked> Option 1 </label>
-											<label class="radio-inline">
-											<input type="radio" name="optionsRadios" id="optionsRadios5" value="option2"> Option 2 </label>
-											<label class="radio-inline">
-											<input type="radio" name="optionsRadios" id="optionsRadios6" value="option3" disabled> Disabled </label>
-										</div>
 									</div>
 								</div>
 								<div class="form-actions">
-									<button type="submit" class="btn blue">Submit</button>
-									<button type="button" class="btn default">Cancel</button>
+									<button type="submit" value="submit" name="formSubmit" class="btn red">Submit</button>
+									<a href="../suggestions.html">
+										<button type="button" class="btn default">Cancel</button>
+									</a>
 								</div>
 							</form>
+							
 						</div>
 					</div>
 					<!-- END SAMPLE FORM PORTLET-->
