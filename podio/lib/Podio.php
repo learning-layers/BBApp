@@ -108,7 +108,15 @@ class Podio {
   public static function is_authenticated() {
     return self::$oauth && self::$oauth->access_token;
   }
-
+  
+  // ----------------------------------------------------
+  // Invalidate access token to force re-authentication
+  // Author: Gilbert Peffer
+  // ----------------------------------------------------
+  public static function invalidate_access_token() {
+    self::$oauth->access_token = 0;
+  }
+    
   public static function request($method, $url, $attributes = array(), $options = array()) {
     if (!self::$ch) {
       throw new Exception('Client has not been setup with client id and client secret.');
