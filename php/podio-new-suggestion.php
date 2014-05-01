@@ -1,7 +1,14 @@
 <?php
 // Set up the REDIRECT_URI -- which is just the URL for this file.
 // define("REDIRECT_URI", 'http://localhost/podio-php/examples/server-auth.php');
-define("REDIRECT_URI", "http://$_SERVER[HTTP_HOST]/learning-toolbox/suggestions.html");
+if ($_SERVER['HTTP_HOST'] == "localhost") {
+    $rootDir = "http://$_SERVER[HTTP_HOST]/learning-toolbox";
+}
+else {
+    $rootDir = "http://$_SERVER[HTTP_HOST]";
+}
+
+define("REDIRECT_URI", $rootDir."/suggestions.html");
 
   // Include the config file and the Podio library
   require_once '../podio/config.php';
@@ -10,6 +17,11 @@ define("REDIRECT_URI", "http://$_SERVER[HTTP_HOST]/learning-toolbox/suggestions.
   // Setup the API client reference. Client ID and Client Secrets are defined
   // as constants in config.php
   Podio::setup( CLIENT_ID, CLIENT_SECRET );
+  
+  if(!isset($_GET['code']) && !Podio::is_authenticated()) {
+    $_SESSION['preauthurl'] = $rootDir."/php/podio-new-suggestion.php";
+    header( 'Location: grant-podio-access.php' ) ;
+  }
 ?>
 
 <!DOCTYPE html>
@@ -179,14 +191,14 @@ License: You must have a valid license purchased only from themeforest(the above
 	<?php
 	
   }
-  elseif (!isset($_GET['code'])) {
+  // elseif (!isset($_GET['code'])) {
     // If $_GET['code'] is not set it means we are not trying to authenticate.
     // In that case just display a link to start the serv flow
     // $auth_url = htmlentities(Podio::authorize_url(REDIRECT_URI));
     // print "<a href='{$auth_url}'>Start authenticating</a>";
-    $_SESSION['preauthurl'] = "http://$_SERVER[HTTP_HOST]/learning-toolbox/php/podio-new-suggestion.php";
-    header( 'Location: grant-podio-access.php' ) ;
-  }
+    // $_SESSION['preauthurl'] = "http://$_SERVER[HTTP_HOST]/learning-toolbox/php/podio-new-suggestion.php";
+    // header( 'Location: grant-podio-access.php' ) ;
+  // }
   else {
     // Otherwise try to authenticate using the code provided.
 

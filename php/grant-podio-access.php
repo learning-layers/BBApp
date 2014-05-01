@@ -1,6 +1,13 @@
 <?php
 // Set up the REDIRECT_URI -- which is just the URL for this file.
-define("REDIRECT_URI", "http://$_SERVER[HTTP_HOST]/learning-toolbox/php/grant-podio-access.php");
+if ($_SERVER['HTTP_HOST'] == "localhost") {
+    $rootDir = "http://$_SERVER[HTTP_HOST]/learning-toolbox";
+}
+else {
+    $rootDir = "http://$_SERVER[HTTP_HOST]";
+}
+
+define("REDIRECT_URI", $rootDir."/php/grant-podio-access.php");
 // define("REDIRECT_URI", 'http://learning-toolbox.glyn.in/php/podio-list-my-suggestions.php');
 
   // Include the config file and the Podio library
@@ -86,11 +93,14 @@ License: You must have a valid license purchased only from themeforest(the above
         // echo "<br>HTTP_REFERER is NOT set<br>";
 
         if (isset($_SESSION['preauthurl'])) {
-            // echo "<br>PREAUTHURL is set<br>";            
+            echo "<br>PREAUTHURL is set<br>";            
             $continueUrl = $_SESSION['preauthurl'];
+            echo "Before unset: <br>".$continueUrl."<br>";            
+            unset($_SESSION['preauthurl']);
+            echo "After unset: <br>".$continueUrl."<br>";            
         } else {            
             // echo "<br>PREAUTHURL is NOT set<br>";            
-            $continueUrl = "http://$_SERVER[HTTP_HOST]/learning-toolbox/home-context-my-toolbox.html";
+            $continueUrl = $rootDir."/home-context-my-toolbox.html";
         }
     }
     
