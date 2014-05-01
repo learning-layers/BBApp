@@ -13,6 +13,7 @@ define("REDIRECT_URI", $rootDir."/php/grant-podio-access.php");
   // Include the config file and the Podio library
   require_once '../podio/config.php';
   require_once '../podio/PodioAPI.php';
+  require_once './PodioLtb.php';
 
   // Setup the API client reference. Client ID and Client Secrets are defined
   // as constants in config.php
@@ -82,7 +83,7 @@ License: You must have a valid license purchased only from themeforest(the above
     
     // Invalidate the access token if user wants to disconnect from Podio 
     if (isset($_POST['formDisconnect'])) {
-        Podio::invalidate_access_token();
+        PodioLtb::invalidate_access_token();
     }
     
     if (isset($_SERVER['HTTP_REFERER'])) {
@@ -93,11 +94,11 @@ License: You must have a valid license purchased only from themeforest(the above
         // echo "<br>HTTP_REFERER is NOT set<br>";
 
         if (isset($_SESSION['preauthurl'])) {
-            echo "<br>PREAUTHURL is set<br>";            
+            // echo "<br>PREAUTHURL is set<br>";            
             $continueUrl = $_SESSION['preauthurl'];
-            echo "Before unset: <br>".$continueUrl."<br>";            
+            // echo "Before unset: <br>".$continueUrl."<br>";            
             unset($_SESSION['preauthurl']);
-            echo "After unset: <br>".$continueUrl."<br>";            
+            // echo "After unset: <br>".$continueUrl."<br>";            
         } else {            
             // echo "<br>PREAUTHURL is NOT set<br>";            
             $continueUrl = $rootDir."/home-context-my-toolbox.html";
