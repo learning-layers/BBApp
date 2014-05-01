@@ -18,6 +18,13 @@
 -------------------------------------------------------------- */
 
 /*
+ * Replace the default white background with black background
+ */
+.page-content {  
+  background-color: #000; 
+}
+
+/*
  * This centres the tiles and also ensures that they realign 
  * properly as the window resizes. 
  * 
