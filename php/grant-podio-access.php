@@ -1,6 +1,6 @@
 <?php
 // Set up the REDIRECT_URI -- which is just the URL for this file.
-define("REDIRECT_URI", 'http://localhost/learning-toolbox/php/grant-podio-access.php');
+define("REDIRECT_URI", "http://$_SERVER[HTTP_HOST]/learning-toolbox/php/grant-podio-access.php");
 // define("REDIRECT_URI", 'http://learning-toolbox.glyn.in/php/podio-list-my-suggestions.php');
 
   // Include the config file and the Podio library
@@ -10,6 +10,7 @@ define("REDIRECT_URI", 'http://localhost/learning-toolbox/php/grant-podio-access
   // Setup the API client reference. Client ID and Client Secrets are defined
   // as constants in config.php
   Podio::setup( CLIENT_ID, CLIENT_SECRET );
+  
   $auth_url = htmlentities(Podio::authorize_url(REDIRECT_URI));
 ?>
 <!DOCTYPE html>
@@ -31,7 +32,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- BEGIN HEAD -->
 <head>
 <meta charset="utf-8"/>
-<title>Metronic | Admin Dashboard Template</title>
+<title>Grant Podio Access - Learning Toolbox</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="" name="description"/>
@@ -62,7 +63,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <body class="login">
 <!-- BEGIN LOGO -->
 <div class="logo">
-    <a href="home-context-my-toolbox.html">
+    <a href="../home-context-my-toolbox.html">
         <img src="../assets/img/logo-big-ltb.png" alt=""/>
     </a>
 </div>
@@ -70,13 +71,33 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- BEGIN LOGIN -->
 <div class="content">
     <?php
+    // echo "http://$_SERVER[HTTP_HOST]/learning-toolbox/php/grant-podio-access.php";
     
     // Invalidate the access token if user wants to disconnect from Podio 
     if (isset($_POST['formDisconnect'])) {
         Podio::invalidate_access_token();
     }
     
+    if (isset($_SERVER['HTTP_REFERER'])) {
+        // echo "<br>HTTP_REFERER is set<br>";
+        $continueUrl = $_SERVER['HTTP_REFERER'];
+    }
+    else {
+        // echo "<br>HTTP_REFERER is NOT set<br>";
+
+        if (isset($_SESSION['preauthurl'])) {
+            // echo "<br>PREAUTHURL is set<br>";            
+            $continueUrl = $_SESSION['preauthurl'];
+        } else {            
+            // echo "<br>PREAUTHURL is NOT set<br>";            
+            $continueUrl = "http://$_SERVER[HTTP_HOST]/learning-toolbox/home-context-my-toolbox.html";
+        }
+    }
+    
+    // echo "ContinueUrl - ".$continueUrl."<br>";
+    
     if (Podio::is_authenticated()) {
+                
     ?>
         <!-- BEGIN 'CONNECTED TO PODIO' FORM -->
     <form class="disconnect-form" action="grant-podio-access.php" method="post">
@@ -90,9 +111,9 @@ License: You must have a valid license purchased only from themeforest(the above
             </button>
         </div>
         <div class="form-actions">
-            <a href="../home-context-my-toolbox.html">
+            <a href="<?php echo $continueUrl; ?>">
             <button type="button" class="btn dark pull-left">
-            Cancel
+            Continue <i class="fa fa-arrow-circle-o-right"></i>
             </button>
             </a>
         </div>
@@ -118,7 +139,7 @@ License: You must have a valid license purchased only from themeforest(the above
             </span>
         </div>
         <div class="form-actions">
-            <button type="submit" class="btn red pull-left">
+            <button type="submit" value="connect" name="formConnect" class="btn red pull-left">
             Connect to Podio <i class="m-icon-swapright m-icon-white"></i>
             </button>
             </a>
@@ -150,16 +171,16 @@ License: You must have a valid license purchased only from themeforest(the above
         <h2 class="form-title"><img src="../assets_ltb/img/ltb-logo.png" height="12%" width="12%">  Datastore</h2>
         <div class="form-actions">
             <div class="pull-left" style="width:200px">            
-                <label style="width:150px;">Connected to Podio. To disconnect click <i class="fa fa-power-off"></i></label>
+                <label style="width:190px;">You are connected to Podio. To disconnect click <i class="fa fa-power-off"></i></label>
             </div>
             <button type="submit" value ="disconnect" name="formDisconnect" class="btn red pull-right">
                 <i class="fa fa-power-off"></i>
             </button>
         </div>
         <div class="form-actions">
-            <a href="../home-context-my-toolbox.html">
+            <a href="<?php echo $continueUrl; ?>">
             <button type="button" class="btn dark pull-left">
-            Cancel
+            Continue <i class="fa fa-arrow-circle-o-right"></i>
             </button>
             </a>
         </div>

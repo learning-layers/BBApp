@@ -1,7 +1,7 @@
 <?php
 // Set up the REDIRECT_URI -- which is just the URL for this file.
 // define("REDIRECT_URI", 'http://localhost/podio-php/examples/server-auth.php');
-define("REDIRECT_URI", 'http://learning-toolbox.glyn.in/php/podio-add-a-suggestion.php');
+// define("REDIRECT_URI", 'http://learning-toolbox.glyn.in/php/podio-add-a-suggestion.php');
 
     // Include the config file and the Podio library
     require_once '../podio/config.php';
@@ -10,38 +10,7 @@ define("REDIRECT_URI", 'http://learning-toolbox.glyn.in/php/podio-add-a-suggesti
     // Setup the API client reference. Client ID and Client Secrets are defined
     // as constants in config.php
     Podio::setup( CLIENT_ID, CLIENT_SECRET );
-?>
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="refresh" content="2;url=podio-list-my-suggestions.php"> 
-        <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
-        Remove this if you use the .htaccess -->
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-        <title>new_file</title>
-        <meta name="description" content="">
-        <meta name="author" content="Gilbert">
-
-        <meta name="viewport" content="width=device-width; initial-scale=1.0">
-
-        <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-        <link rel="shortcut icon" href="/favicon.ico">
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    </head>
-
-    <body>
-        <div>
-            <header>
-                <h1>Processing...</h1>
-            </header>
-
-        </div>
-    </body>
-</html>
-
-<?php
     // echo "trying-podio-add-suggestion<br>";
 
     if ($_POST['formSubmit'] == "submit") {
@@ -94,5 +63,7 @@ define("REDIRECT_URI", 'http://learning-toolbox.glyn.in/php/podio-add-a-suggesti
         // print $newItem->field('state-of-ticket')->humanized_value()."<br>";
                 
     }
+
+    header( 'Location: ../suggestions.html' ) ;
     
 ?>

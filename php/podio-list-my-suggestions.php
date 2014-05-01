@@ -1,7 +1,7 @@
 <?php
 // Set up the REDIRECT_URI -- which is just the URL for this file.
 // define("REDIRECT_URI", 'http://localhost/podio-php/examples/server-auth.php');
-define("REDIRECT_URI", 'http://learning-toolbox.glyn.in/php/podio-list-my-suggestions.php');
+define("REDIRECT_URI", "http://$_SERVER[HTTP_HOST]/learning-toolbox/php/podio-list-my-suggestions.php");
 
   // Include the config file and the Podio library
   require_once '../podio/config.php';
@@ -45,7 +45,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- END GLOBAL MANDATORY STYLES -->
 <!-- BEGIN THEME STYLES -->
 <link href="../assets/css/style-metronic.css" rel="stylesheet" type="text/css"/>
-<link href="../assets/css/style.css" rel="stylesheet" type="text/css"/>
+<link href="../assets_ltb/css/child/style-child.css" rel="stylesheet" type="text/css"/>
 <link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css"/>
 <link href="../assets/css/plugins.css" rel="stylesheet" type="text/css"/>
 <link href="../assets/css/themes/default.css" rel="stylesheet" type="text/css" id="style_color"/>
@@ -70,8 +70,8 @@ License: You must have a valid license purchased only from themeforest(the above
     <!-- BEGIN TOP NAVIGATION BAR -->
     <div class="header-inner">
         <!-- BEGIN LOGO -->
-        <a class="navbar-brand" href="index.html">
-            <img src="../assets/img/logo.png" alt="logo" class="img-responsive"/>
+        <a class="navbar-brand" href="../home-context-my-toolbox.html">
+            <img src="../assets/img/logo-big-ltb.png" alt="logo" class="img-responsive"/>
         </a>
         <!-- END LOGO -->
         <!-- BEGIN RESPONSIVE MENU TOGGLER -->
@@ -283,8 +283,11 @@ License: You must have a valid license purchased only from themeforest(the above
   elseif (!isset($_GET['code'])) {
     // If $_GET['code'] is not set it means we are not trying to authenticate.
     // In that case just display a link to start the serv flow
-    $auth_url = htmlentities(Podio::authorize_url(REDIRECT_URI));
-    print "<a href='{$auth_url}'>Start authenticating</a>";
+    // $auth_url = htmlentities(Podio::authorize_url(REDIRECT_URI));
+    // print "<a href='{$auth_url}'>Start authenticating</a>";
+    $_SESSION['preauthurl'] = "http://$_SERVER[HTTP_HOST]/learning-toolbox/php/podio-list-my-suggestions.php";
+    // echo "SESSION: ".$_SESSION['preauthurl'];
+    header( 'Location: grant-podio-access.php' ) ;
   }
   else {
     // Otherwise try to authenticate using the code provided.
