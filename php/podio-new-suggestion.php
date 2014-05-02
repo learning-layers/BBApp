@@ -122,7 +122,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 						</div>
 						<div class="portlet-body form">
-							<form action="trying-podio-add-suggestion.php" method="post" enctype="multipart/form-data">
+							<form action="podio-add-suggestion.php" method="post" enctype="multipart/form-data">
 								<div class="form-body">
 									<div class="form-group">
 										<label for="subject">Subject</label>
