@@ -24,6 +24,9 @@
   background-color: #000; 
 }
 
+/*
+ * This forces the iframe from YouTube and Vimeo to become responsive
+ */
 
 .video-responsive{
     overflow:hidden;
@@ -38,6 +41,54 @@
     width:100%;
     position:absolute;
 }
+
+/*
+ * This will centre the icons in the top navigation bar in relation to the (slightly resized) 
+ * hover highlight rectangle.
+ */
+.header.navbar {
+  width: 100%; 
+  padding: 0 20px 0 20px;
+  margin: 0;
+  border: 0px;
+  padding: 0px 0px 0px 0px; 
+  box-shadow: none;
+  height: 44px; 
+  min-height: 44px;
+}
+
+.header.navbar .navbar-nav > li.dropdown > a:last-child {
+    padding-right: 15px;
+}
+
+.header.navbar .navbar-nav > li.dropdown .dropdown-toggle {
+  margin: 0px;
+  padding: 13px 20px 7px 15px;
+}
+
+.header.navbar .navbar-nav {
+  margin-right: 5px;
+  display: block; 
+}
+
+
+/*
+ * Placing the logo and resizing it so it fits into the navbar
+ */
+.header.navbar .navbar-brand img {
+  margin-left: 6px;
+  margin-top: -10px;
+  width: 65%;
+}
+
+/*
+ * Override the  width of the logo container
+ */
+.header.navbar .navbar-brand {
+    /*margin-left: 4px !important;*/
+    width: 50px;
+}
+
 
 /*
  * This centres the tiles and also ensures that they realign 

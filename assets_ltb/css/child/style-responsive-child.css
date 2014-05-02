@@ -27,8 +27,53 @@
  	Page header
  	***/
  	.header.navbar {
- 		padding: 0 20px 0 20px;
+ 		padding: 0 20px 0 0px;
  		position: fixed; 		
  		clear: both;
  	}
-}	
+ 	
+    .header.navbar .navbar-brand img {
+        margin-left: 6px;
+        margin-top: -10px;
+        width: 65%;
+    }
+}
+
+/*
+ * Override the resizing of the width of the logo container, since it also reduces 
+ * the size of the logo
+ */
+@media (max-width:767px) { 
+    
+    .header.navbar .navbar-brand {
+        /*margin-left: 4px !important;*/
+        width: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /*
+     * Reverse 'clear: none' instruction of parent theme
+     */
+    .header.navbar .navbar-nav {
+        display: inline-block;
+        margin: 0 10px 0 0;
+        clear: none;
+    }  
+    
+    /*
+     * Squeeze top navbar 'buttons' if width is below 480px
+     */
+    .header.navbar .navbar-nav > li.dropdown > a:last-child {
+        padding-right: 5px;
+    }
+
+    .header.navbar .navbar-nav > li.dropdown .dropdown-toggle {
+        padding: 13px 20px 7px 5px;
+    }
+
+
+}
+
+
