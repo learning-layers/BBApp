@@ -24,6 +24,7 @@
   background-color: #000; 
 }
 
+
 .video-responsive{
     overflow:hidden;
     padding-bottom:56.25%;
@@ -60,7 +61,7 @@
 @media (min-width: 280px) {
     .tiles .inner{
         width: 135px;
-    }
+    }    
 }
 
 @media (min-width: 320px) {
