@@ -151,7 +151,7 @@ License: You must have a valid license purchased only from themeforest(the above
         </div>
         <div class="form-actions">
             <button type="submit" value="connect" name="formConnect" class="btn red pull-left">
-            Connect to Podio <i class="m-icon-swapright m-icon-white"></i>
+            Connect to Podio <i class="fa fa-arrow-circle-o-right   "></i>
             </button>
             </a>
         </div>
