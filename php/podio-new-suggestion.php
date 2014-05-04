@@ -274,13 +274,13 @@ jQuery(document).ready(function() {
 
 <script> 
     $(function(){
-      $("#includeTopNavbar").load("../snippets/top-navbar.html"); 
+      $("#includeTopNavbar").load("snippets/top-navbar.html"); 
     });
 </script> 
 
 <script>
     $(function(){
-      $("#includeSidebarMenu").load("../snippets/sidebar-menu.html"); 
+      $("#includeSidebarMenu").load("snippets/sidebar-menu.html"); 
     });
 </script> 
 <!-- END JAVASCRIPTS -->
