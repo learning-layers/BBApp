@@ -1,25 +1,32 @@
 <?php
-// Set up the REDIRECT_URI -- which is just the URL for this file.
-if ($_SERVER['HTTP_HOST'] == "localhost") {
-    $rootDir = "http://$_SERVER[HTTP_HOST]/learning-toolbox";
-}
-else {
-    $rootDir = "http://$_SERVER[HTTP_HOST]";
-}
+    /*
+     * Copyright (c) 2014 Gilbert Peffer
+     *
+     * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
+     * in compliance with the License. You may obtain a copy of the License at
+     *
+     * http://www.apache.org/licenses/LICENSE-2.0
+     *
+     * Unless required by applicable law or agreed to in writing, software distributed under the License
+     * is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
+     * or implied. See the License for the specific language governing permissions and limitations under
+     * the License.
+     */
+ 
+    // Include the config file and the Podio library
+    require_once '../podio/config.php';
+    require_once '../podio/PodioAPI.php';
+    require_once './PodioLtb.php';
+    
+    // Set up the REDIRECT_URI -- which is just the URL for this file.
+    // define("REDIRECT_URI", 'http://learning-toolbox.glyn.in/php/podio-list-my-suggestions.php');
+    define("REDIRECT_URI", $rootDir."/php/grant-podio-access.php");
 
-define("REDIRECT_URI", $rootDir."/php/grant-podio-access.php");
-// define("REDIRECT_URI", 'http://learning-toolbox.glyn.in/php/podio-list-my-suggestions.php');
-
-  // Include the config file and the Podio library
-  require_once '../podio/config.php';
-  require_once '../podio/PodioAPI.php';
-  require_once './PodioLtb.php';
-
-  // Setup the API client reference. Client ID and Client Secrets are defined
-  // as constants in config.php
-  Podio::setup( CLIENT_ID, CLIENT_SECRET );
-  
-  $auth_url = htmlentities(Podio::authorize_url(REDIRECT_URI));
+    // Setup the API client reference. Client ID and Client Secrets are defined
+    // as constants in config.php
+    Podio::setup( CLIENT_ID, CLIENT_SECRET );
+      
+    $auth_url = htmlentities(Podio::authorize_url(REDIRECT_URI));
 ?>
 <!DOCTYPE html>
 
