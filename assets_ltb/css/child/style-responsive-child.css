@@ -26,6 +26,17 @@
  * Remove position:relative so that the bar on the top remains in place (position:fixed)
  */
 
+.mytabbar
+{
+    width: 100%;
+}
+    
+.itemtab
+{
+    width: 20%; 
+    font-size: 15px;
+}
+
 @media (max-width:991px) { 
 	
 	/***
@@ -41,6 +52,11 @@
         margin-left: 6px;
         margin-top: -10px;
         width: 65%;
+    }
+    
+    .content-responsive 
+    {
+        margin-top: 30px;
     }
 }
 
@@ -78,7 +94,20 @@
         padding: 13px 20px 7px 5px;
     }
 
-
+   	/***
+    Tab-bar
+    ***/
+	.mytabbar
+    {
+        font-size:2px;
+        width: 100%;
+    }
+    
+    .itemtab
+    {
+        width: 20%; 
+        font-size: 0px;
+    }
 }
 
 

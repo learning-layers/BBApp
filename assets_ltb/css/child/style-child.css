@@ -125,6 +125,7 @@ body {
     display: inline-block;
 }
 
+
 @media (min-width: 280px) {
     .tiles .inner{
         width: 135px;
