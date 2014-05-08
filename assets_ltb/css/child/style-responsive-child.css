@@ -72,6 +72,15 @@
     }
 }
 
+@media (max-width: 610px)
+{   
+    .itemtab
+    {
+        width: 20%; 
+        font-size: 12px;
+    }
+}
+
 @media (max-width: 480px) {
 
     /*
