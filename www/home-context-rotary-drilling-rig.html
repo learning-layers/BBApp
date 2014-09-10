@@ -42,6 +42,16 @@
     <!-- END THEME STYLES -->
     
     <link rel="shortcut icon" href="favicon.ico"/>
+    <script src="assets/plugins/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/	jquery.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/readJson.js"></script>
+	
+	<script>
+	    $(document).ready(function () {
+	        var aux = document.getElementById("example");
+	        aux.innerHTML = readJsonSubTilesDegree3(7,5,5);
+	    });
+	</script>
     
 </head>
 
@@ -83,162 +93,11 @@
             
 			<!-- BEGIN PAGE CONTENT-->
 			<div class="tiles content-responsive">
-              <div class="inner">	
-                <a href="information-context-rotary-drilling-rig.html">
-                <div class="tile double-down bg-blue">
-                    <div class="tile-body">
-                        <i class="fa fa-book"></i>
-                    </div>
-                    <div class="tile-object">
-                        <div class="name">
-                             Information
-                        </div>
-                        <div class="number">
-                             46
-                        </div>
-                    </div>
+                <div class="inner" id="example">	
                 </div>
-                </a>
-                <div class="tile image">
-                    <div class="tile-body">
-                        <img src="assets_ltb/img/rotary_drilling_rig.jpg" alt="">
-                    </div>
-                    <div class="tile-object">
-                        <div class="name">
-                             LB 44
-                        </div>
-                    </div>
-                </div>
-                <a href="first-aid.html">
-                <div class="tile  bg-green">
-                    <div class = "tile-body">
-                        <i class ="fa fa-shield"></i>
-                    </div>
-                    <div class="tile-object">
-                        <div class="name">                      
-                            Health & Safety
-                        </div>
-
-                    </div>
-                </div>
-                </a>
-                <a href="create.html">
-                    <div class="tile bg-blue">
-                        <div class="tile-body">
-                            <i class="fa fa-magic"></i>
-                        </div>
-                        <div class="tile-object">
-                            <div class="name">
-                                 Collections
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="suggestions.html">
-                    <div class="tile bg-blue">
-                        <div class="tile-body">
-                            <i class ="fa fa-lightbulb-o"></i>
-                        </div>
-                        <div class="tile-object">
-                            <div class="name">
-                                Ideas
-                            </div>
-                        </div>
-                    </div>               
-                </a>
-                <a href="home-context-reach-stacker.html">
-                <div class="tile image">
-                    <div class="tile-body">
-                        <img src="assets_ltb/img/qr-tiles.png" alt="">
-                    </div>
-                    <div class="tile-object">
-                    </div>
-                </div>
-                </a>
-                <a href="socialmedia-context-minig-excavator.html">
-                <div class="tile bg-blue">
-                    <img src="assets_ltb/img/social-button-blue.png" width=115 height=115 VSPACE=0 alt="">
-                    <div class="tile-object">
-                        <div class="name">
-                             Social Media
-                        </div>
-                    </div>
-                </div>
-                </a>
-                <a href="dont-panic.html">
-                    <div class="tile bg-blue">
-                        <div class="tile-body">
-                            <br/>
-                            <h1>Don't</h1>
-                            <br/>
-                            <h1>Panic</h1>
-                        </div>
-                        <div class="tile-object">
-                            <div class="name">
-                                 Get Help
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <div class="tile bg-blue">
-                    <div class="tile-body">
-                        <i class="fa fa-list"></i>
-                    </div>
-                    <div class="tile-object">
-                        <div class="name">
-                             Tutorial
-                        </div>
-                    </div>
-                </div>
-                <div class="tile bg-blue">
-                    <div class="tile-body">
-                        <i class="fa fa-gavel"></i>
-                    </div>
-                    <div class="tile-object">
-                        <div class="name">
-                             Practical Tips
-                        </div>
-                    </div>
-                </div>
-                <a href="php/grant-podio-access.php">
-                    <div class="tile bg-blue">
-                        <div class="tile-body">
-                            <i class="fa fa-cogs"></i>
-                        </div>
-                        <div class="tile-object">
-                            <div class="name">
-                                 Settings
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <div class="tile double selected bg-blue">
-                    <div class="corner">
-                    </div>
-                    <div class="check">
-                    </div>
-                    <div class="tile-body">
-                        <h4>engraf@bau-abc-rostrup.de</h4>
-                        <p>
-                             Re: Learning Toolbox v0.5
-                        </p>
-                        <p>
-                             1 April 2014 12:30PM confirmed for the project plan update meeting...
-                        </p>
-                    </div>
-                    <div class="tile-object">
-                        <div class="name">
-                            <i class="fa fa-envelope"></i>
-                        </div>
-                        <div class="number">
-                             14
-                        </div>
-                    </div>
-                </div>
-              </div>
-			</div>
-			<!-- END PAGE CONTENT-->
+            </div>
 		</div>
+			<!-- END PAGE CONTENT-->
 	</div>
 	<!-- END CONTENT -->
 </div>

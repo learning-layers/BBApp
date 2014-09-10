@@ -41,8 +41,16 @@
     <link href="assets/css/custom.css" rel="stylesheet" type="text/css"/>
     <!-- END THEME STYLES -->
     
-    <link rel="shortcut icon" href="favicon.ico"/>
-    
+	<script src="assets/plugins/jquery-1.10.2.min.js" type="text/javascript"></script>
+	<script type="text/javascript" charset="utf-8" src="js/readJson.js"></script>
+	
+	<script>
+		$( document ).ready(function() {
+			var aux = document.getElementById("example");
+			aux.innerHTML = readJsonSubTiles(2);
+		});
+	</script>
+	
 </head>
 
 <!-- BEGIN BODY -->
@@ -82,56 +90,7 @@
 		<div class="page-content">
 			<!-- BEGIN PAGE CONTENT-->
 			<div class="tiles content-responsive">
-              <div class="inner" style="width:300px">
-                <a href="https://www.facebook.com">
-				<div class="tile bg-blue">
-					<div class="tile-body">
-						<i class="fa fa-facebook"></i>
-					</div>
-					<div class="tile-object">
-						<div class="name">
-							 Facebook
-						</div>
-					</div>
-				</div>
-				</a>
-				<a href="https://www.linkedin.com">
-				<div class="tile bg-blue">
-					<div class="tile-body">
-						<i class="fa fa-linkedin"></i>
-					</div>
-					<div class="tile-object">
-						<div class="name">
-							 LinkedIn
-						</div>
-					</div>
-				</div>
-				</a>
-				<a href="https://www.twitter.com">
-				<div class="tile bg-blue">
-					<div class="tile-body">
-						<i class="fa fa-twitter"></i>
-					</div>
-					<div class="tile-object">
-						<div class="name">
-							 Twitter
-						</div>
-					</div>
-				</div>
-				</a>
-				<a href="index.html">
-				<div class="tile bg-red">
-					<div class="tile-body">
-   						<i class =" fa fa-home"></i>
-					</div>
-					<div class="tile-object">
-						<div class="name">
-							 Home
-						</div>
-					</div>
-				</div>
-				</a>
-
+              <div class="inner" id="example" style="width:300px">
               </div>
 			</div>
 			<!-- END PAGE CONTENT-->

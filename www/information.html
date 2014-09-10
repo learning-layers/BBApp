@@ -22,8 +22,6 @@
     <title>My Network - Learning Toolbox</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <meta content="" name="description"/>
-    <meta content="" name="author"/>
     
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
@@ -40,9 +38,23 @@
     <link href="assets/css/themes/default.css" rel="stylesheet" type="text/css" id="style_color"/>
     <link href="assets/css/custom.css" rel="stylesheet" type="text/css"/>
     <!-- END THEME STYLES -->
-    
+	
+	<script src="assets/plugins/jquery-1.10.2.min.js" type="text/javascript"></script>
+	
+<!-- END CORE PLUGINS -->
+	
     <link rel="shortcut icon" href="favicon.ico"/>
-    
+    <script type="text/javascript" src="js/	jquery.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/cordova.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/readJson.js"></script>
+	
+	<script>
+		$( document ).ready(function() {
+			var aux = document.getElementById("example");
+			aux.innerHTML = readJsonSubTiles(0);
+		});
+	</script>
+	
 </head>
 
 <!-- BEGIN BODY -->
@@ -82,78 +94,12 @@
 		<div class="page-content">
 			<!-- BEGIN PAGE CONTENT-->
 			<div class="tiles content-responsive">
-              <div class="inner">
-              	<a href="search.html">
-              	<div class="tile double bg-red">
-					<div class="tile-body">
-					<i class="fa fa-search"></i>
-					</div>
-					<div class="tile-object">
-					
-						<div class="name">
-							Click here to search
-						</div>
-					</div>
-              	</div>
-              </a>
-              <!-- home page tile -->
-              
-              
-
-              <!-- Recent search page tile -->
-                 <div class="tile bg-red">
-					<div class="tile-body">
-              				<i class="fa fa-list"></i>
-					</div>
-						<div class="tile-object">	
-					
-							<div class="name">
-								Recent Searches
-						</div>
-					</div>
-				</div>
-				<!-- Recommendation Tile -->
-				<div class="tile  bg-blue">
-					<div class = "tile-body">
-						<i class ="fa fa-arrow-circle-o-right"></i>
-					</div>
-					<div class="tile-object">
-						<div class="name">						
-							Recommendations
-						</div>
-
-					</div>
-				</div>
-                <a href= "first-aid.html">
-                  <div class="tile  bg-green">
-					<div class = "tile-body">
-						<i class ="fa fa-shield"></i>
-					</div>
-					<div class="tile-object">
-						<div class="name">						
-							Health & Safety
-						</div>
-					</div>
-				  </div>
-				</a>
-				<a href= "index.html">
-	              	<div class="tile bg-red">
-						<div class="tile-body">
-	              			<i class="fa fa-home"></i>		
-						</div>
-							<div class="tile-object">
-						
-								<div class="name">
-									Home
-								</div>
-							</div>
-	              	</div>
-              </a>
+              <div class="inner" id="example">
 			<!-- END PAGE CONTENT-->
-		</div>
-	</div>
+		    </div>
+	    </div>
 	<!-- END CONTENT -->
-</div>
+    </div>
 </div>
 <!-- END CONTAINER -->
 
