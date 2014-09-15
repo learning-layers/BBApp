@@ -10,7 +10,7 @@ function startScan() {
 
 	cordova.plugins.barcodeScanner.scan(
 		function (result) {
-            window.document.location = 'work-flow.html';
+            window.document.location = 'swipe.html';
 			//var s = "Result: " + result.text + "<br/>" +
 			//"Format: " + result.format + "<br/>" +
 			//"Cancelled: " + result.cancelled;
