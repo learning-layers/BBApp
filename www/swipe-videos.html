@@ -18,11 +18,26 @@
     <link href="assets/css/themes/default.css" rel="stylesheet" type="text/css" id="style_color"/>
     <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 
+    <script src="assets/plugins/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function () {
+            var aux0 = document.getElementById("navigationbar");
+            var aux1 = document.getElementById("headerPage");
+
+            var iOS = false,
+	        p = navigator.platform;
+            if (p === 'iPad' || p === 'iPhone' || p === 'iPod') {
+                aux0.className = aux0.className + " ios";
+                aux1.style.paddingTop = "220px";
+            }
+        });
+	</script>
+
 </head>
 <body>
 
 <!-- BEGIN HEADER -->
-<div class="header navbar navbar-fixed-top">
+<div class="header navbar navbar-fixed-top" id="navigationbar">
     
     <!-- BEGIN TOP NAVIGATION BAR -->
     <div id="includeTopNavbar"></div>
@@ -37,7 +52,7 @@
     <!-- BEGIN CONTAINER -->
             <div class="swiper-container" style="background-color:#000">
                 <div class="pagination"></div>
-	            <div class="swiper-wrapper" style="padding-top:210px; padding-right: 0px; padding-left: 0px;">
+	            <div class="swiper-wrapper" style="padding-top:210px; padding-right: 0px; padding-left: 0px;" id="headerPage">
 		            <div class="swiper-slide">
 			            <div class="inner">
                             <a><iframe width="100%" height="auto" src="http://www.youtube.com/embed/QqxfwpUtEoQ" frameborder="0" allowfullscreen></iframe></a>

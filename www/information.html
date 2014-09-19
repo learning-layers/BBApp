@@ -47,12 +47,23 @@
     <script type="text/javascript" src="js/	jquery.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/cordova.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/readJson.js"></script>
-	
-	<script>
-		$( document ).ready(function() {
-			var aux = document.getElementById("example");
-			aux.innerHTML = readJsonSubTiles(0);
-		});
+
+    <script>
+    	$(document).ready(function () {
+    	    var aux0 = document.getElementById("navigationbar");
+    	    var aux = document.getElementById("example");
+
+    	    var iOS = false,
+		    p = navigator.platform;
+    	    if (p === 'iPad' || p === 'iPhone' || p === 'iPod') {
+    	        aux0.className = aux0.className + " ios";
+    	        aux.className = aux.className + " ios";
+    	        aux.innerHTML = readJsonSubTiles(0);
+    	    }
+    	    else {
+    	        aux.innerHTML = readJsonSubTiles(0);
+    	    }
+    	});
 	</script>
 	
 </head>
@@ -61,12 +72,9 @@
 <body class="page-header-fixed page-sidebar-closed">
     
 <!-- BEGIN HEADER -->
-<div class="header navbar navbar-fixed-top">
-    
-    <!-- BEGIN TOP NAVIGATION BAR -->
-    <div id="includeTopNavbar"></div>
-    <!-- END TOP NAVIGATION BAR -->
-    
+<div class="header navbar navbar-fixed-top" id="navigationbar">
+    <div id="includeTopNavbar">
+    </div>
 </div>
 <!-- END HEADER -->
 
@@ -94,12 +102,12 @@
 		<div class="page-content">
 			<!-- BEGIN PAGE CONTENT-->
 			<div class="tiles content-responsive">
-              <div class="inner" id="example">
-			<!-- END PAGE CONTENT-->
-		    </div>
-	    </div>
-	<!-- END CONTENT -->
-    </div>
+                <div class="inner" id="example">
+		        </div>
+	        </div>
+            <!-- END PAGE CONTENT-->
+	    <!-- END CONTENT -->
+        </div>
 </div>
 <!-- END CONTAINER -->
 

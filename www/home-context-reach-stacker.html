@@ -45,12 +45,23 @@
     <script src="assets/plugins/jquery-1.10.2.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="js/	jquery.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/readJson.js"></script>
-	
-	<script>
-	    $(document).ready(function () {
-	        var aux = document.getElementById("example");
-	        aux.innerHTML = readJsonSubTilesDegree4(7, 5, 5, 5);
-	    });
+
+    <script>
+        $(document).ready(function () {
+            var aux0 = document.getElementById("navigationbar");
+            var aux = document.getElementById("example");
+
+            var iOS = false,
+		    p = navigator.platform;
+            if (p === 'iPad' || p === 'iPhone' || p === 'iPod') {
+                aux0.className = aux0.className + " ios";
+                aux.className = aux.className + " ios";
+                aux.innerHTML = readJsonSubTilesDegree4(7, 5, 5, 5);
+            }
+            else {
+                aux.innerHTML = readJsonSubTilesDegree4(7, 5, 5, 5);
+            }
+        });
 	</script>
     
 </head>
@@ -59,7 +70,7 @@
 <body class="page-header-fixed page-sidebar-closed">
     
 <!-- BEGIN HEADER -->
-<div class="header navbar navbar-fixed-top">
+<div class="header navbar navbar-fixed-top" id="navigationbar">
     
     <!-- BEGIN TOP NAVIGATION BAR -->
     <div id="includeTopNavbar"></div>

@@ -1,0 +1,828 @@
+<!--
+ * Copyright (c) 2014 KeenThemes, (c) 2014 Owen Grey, Gilbert Peffer, Andy Tarracona
+ * 
+ * This software uses the Metronic template owned by http://www.keenthemes.com/ and builds on sample
+ * code provided by the theme's creators. The template license does not allow for derivative work to
+ * be distributed, and hence the use of the code below is restricted by the original license. To purchase 
+ * the theme, go to http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes 
+ *
+-->
+
+<!DOCTYPE html>
+
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8"/>
+    <title>Gilbert Peffer - Learning Toolbox</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="description"/>
+    <meta content="" name="author"/>
+    
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
+    <link href="assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="assets_ltb/plugins/bootstrap/css/child/bootstrap.min-child.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+    <!-- END GLOBAL MANDATORY STYLES -->
+    
+    <!-- BEGIN THEME STYLES -->
+    <link href="assets/css/style-metronic.css" rel="stylesheet" type="text/css"/>
+    <link href="assets_ltb/css/child/style-child.css" rel="stylesheet" type="text/css"/>
+    <link href="assets_ltb/css/child/style-responsive-child.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/css/plugins.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/css/themes/default.css" rel="stylesheet" type="text/css" id="style_color"/>
+    <link href="assets/css/pages/profile.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/pages/portfolio.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/custom.css" rel="stylesheet" type="text/css"/>
+    <!-- END THEME STYLES -->
+    
+	<link rel="stylesheet" href="css/lightbox.css">
+    <script src="assets/plugins/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function () {
+            var aux0 = document.getElementById("navigationbar");
+            var aux1 = document.getElementById("headerPage");
+
+            var iOS = false,
+		    p = navigator.platform;
+            if (p === 'iPad' || p === 'iPhone' || p === 'iPod') {
+                aux0.className = aux0.className + " ios";
+                aux1.style.paddingTop = "20px";
+            }
+        });
+	</script>
+    
+</head>
+
+<!-- BEGIN BODY -->
+<body class="page-header-fixed page-sidebar-closed">
+    
+<!-- BEGIN HEADER -->
+<div class="header navbar navbar-fixed-top" id="navigationbar">
+    
+    <!-- BEGIN TOP NAVIGATION BAR -->
+    <div id="includeTopNavbar"></div>
+    <!-- END TOP NAVIGATION BAR -->
+    
+</div>
+<!-- END HEADER -->
+
+<div class="clearfix">
+</div>
+
+<!-- BEGIN CONTAINER -->
+<div class="page-container">
+    
+    <!-- BEGIN SIDEBAR -->
+    <div class="page-sidebar-wrapper">
+        <div class="page-sidebar navbar-collapse collapse">
+            <!-- add "navbar-no-scroll" class to disable the scrolling of the sidebar menu -->
+            
+            <!-- BEGIN SIDEBAR MENU -->
+            <div id="includeSidebarMenu"></div>
+            <!-- END SIDEBAR MENU -->
+            
+        </div>
+    </div>
+    <!-- END SIDEBAR -->
+    
+	<!-- BEGIN CONTENT -->
+	<div class="page-content-wrapper">
+		<div class="page-content" style="min-height:873px !important; background-color:#FFF; ">
+			<!-- BEGIN PAGE CONTENT-->
+			<div class="row profile content-responsive" id="headerPage">
+				<div class="col-md-12">
+					<!--BEGIN TABS-->
+					<div class="tabbable tabbable-full-width">
+                        <div class="btn-group btn-group-solid mytabbar">
+						<button type="button" data-toggle="tab" href="#tab_1_1" class="btn red itemtab"><i class="fa fa-user"></i> Overview</button>
+						<button type="button" data-toggle="tab" href="#tab_1_3" class="btn red itemtab"><i class="fa fa-cogs"></i> Account</button>
+                        <button type="button" data-toggle="tab" href="#tab_1_4" class="btn red itemtab"><i class="fa fa-briefcase"></i> Projects</button>
+                        <button type="button" data-toggle="tab" href="#tab_1_6" class="btn red itemtab"><i class="fa fa-question"></i> Discussions</button>
+                        <button type="button" data-toggle="tab" href="#tab_1_8" class="btn red itemtab"><i class="fa fa-caret-square-o-right"></i> Collections</button>
+                        </div>
+						<div class="tab-content">
+							<div class="tab-pane active" id="tab_1_1">
+								<div class="row">
+									<div class="col-md-3">
+										<ul class="list-unstyled profile-nav">
+											<li>
+												<img src="assets_ltb/img/profile/profile-0.jpg" class="img-responsive" alt="">
+												<a href="#" class="profile-edit">
+													 edit
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													 Messages
+													<span>
+														 3
+													</span>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													 Friends
+												</a>
+											</li>
+										</ul>
+									</div>
+									<div class="col-md-9">
+										<div class="row">
+											<div class="col-md-8 profile-info">
+												<h1><b>Gilbert Peffer</b></h1>
+												<p>
+													 I am currently working as a project coordinator at the Centre for Numerical Methods in Engineering and as a researcher with IAFI, a small research unit at the University of Barcelona that focuses on the broad philosophical and methodological foundations of finance.<br /><br />
+                                                     I studied aeronautical and aerospace engineering at the University of Stuttgart where I also worked as a research assistant on aerodynamic simulation models. In 1992 I joined the Oxford University Computing Lab to continue in this line of research, but with a more theoretical emphasis on the numerical mathematics of partial differential equations. In 1995, I was hired by Salomon Brothers, a U.S. investment bank, into their fixed income research division where I worked for a number of years, first as a generalist, then as a vice-president. In the year 2000, I took up a position at CIMNE to promote research activities in the field of numerical methods in finance. I have coordinated a number of research projects in the area of learning technologies, decision support, and business simulation.Currently I am coordinating a EU research project, x Delia, that investigates the role of behavioural biases and emotions in building financial competence and expertise, and that develops sensor and game technologies to support non-formal and informal learning in professional trading, private investment, and personal finance. <br /><br />
+                                                     My current research interests centre on investigating systemic financial risk as a social, governmental, and immanently reflexive phenomenon, on developing a methodological basis for multiagent modelling of financial markets, and on conceptualising serious games for immersive learning in business and finance. <br /><br />
+                                                     For an up-to-date list of my talks and publications, please follow this link.<br /><br />
+
+                                                    <b>Education:</b><br />
+
+                                                    - Business Administration, Universidad de Barcelona, 2002-today<br />
+                                                    - Philosophy, Fern-Universitat Hagen, 2004-05<br />
+                                                    - Mathematics and Computing, Merton College, Oxford University, 1992-95<br />
+                                                    - Aeronautical and Aerospace Engineering, Universitat Stuttgart, 1987-92<br /><br />
+                                                    
+                                                    <b>Career history:</b><br />
+
+                                                    - R&D Project Coordinator, CIMNE, 2000-today<br />
+                                                    - External consultant, Universidad de Barcelona, 2006-2008<br />
+                                                    - Visiting Professor (MIS), Universidad Internacional de Cataluña, 2004<br />
+                                                    - Vice-President, Salomon Brothers Int'l, 1997-99<br />
+                                                    - Generalist (Bond Portfolio Analysis), Salomon Brothers Int'l, 1995-96<br />
+												</p>
+												<p>
+													<a href="#">
+														 www.mywebsite.com
+													</a>
+												</p>
+												<ul class="list-inline">
+													<li>
+														<i class="fa fa-map-marker"></i> Spain
+													</li>
+													<li>
+														<i class="fa fa-star"></i> Learning Toolbox
+													</li>
+													<li>
+														<i class="fa fa-briefcase"></i> Wicam
+													</li>
+													<li>
+														<i class="fa fa-briefcase"></i> Living Documents
+													</li>
+												</ul>
+											</div>
+											<!--end col-md-8-->
+											
+										</div>
+										<!--end row-->
+									</div>
+								</div>
+							</div>
+							<!--tab_1_2-->
+							<div class="tab-pane " id="tab_1_3">
+								<div class="row profile-account">
+									<div class="col-md-3">
+										<ul class="ver-inline-menu tabbable margin-bottom-10">
+											<li class="">
+												<a data-toggle="tab" href="#tab_1-1">
+													<i class="fa fa-cog"></i> Personal info
+												</a>
+												<span class="after">
+												</span>
+											</li>
+											<li class="active">
+												<a data-toggle="tab" href="#tab_2-2">
+													<i class="fa fa-picture-o"></i> Change Avatar
+												</a>
+											</li>
+											<li>
+												<a data-toggle="tab" href="#tab_3-3">
+													<i class="fa fa-lock"></i> Change Password
+												</a>
+											</li>
+										</ul>
+									</div>
+									<div class="col-md-9">
+										<div class="tab-content">
+											<div id="tab_1-1" class="tab-pane">
+												<form role="form" action="#">
+													<div class="form-group">
+														<label class="control-label">First Name</label>
+														<input type="text" placeholder="Gilbert" class="form-control">
+													</div>
+													<div class="form-group">
+														<label class="control-label">Last Name</label>
+														<input type="text" placeholder="Peffer" class="form-control">
+													</div>
+													<div class="form-group">
+														<label class="control-label">Description</label>
+														<input type="text" placeholder="I am currently working as a project coordinator ..." class="form-control">
+													</div>
+													<div class="form-group">
+														<label class="control-label">Website Url</label>
+														<input type="text" placeholder="http://www.gilbert-peffer.com" class="form-control">
+													</div>
+													<div class="margiv-top-10">
+														<a href="#" class="btn green">
+															 Save Changes
+														</a>
+														<a href="#" class="btn default">
+															 Cancel
+														</a>
+													</div>
+												</form>
+											</div>
+											<div id="tab_2-2" class="tab-pane active">
+												<p>
+													 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+												</p>
+												<form action="#" role="form">
+													<div class="form-group">
+														<div class="fileinput fileinput-new" data-provides="fileinput">
+															<div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
+																<img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image" alt="">
+															</div>
+															<div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;">
+															</div>
+															<div>
+																<span class="btn default btn-file">
+																	<span class="fileinput-new">
+																		 Select image
+																	</span>
+																	<span class="fileinput-exists">
+																		 Change
+																	</span>
+																	<input type="file" name="...">
+																</span>
+																<a href="#" class="btn default fileinput-exists" data-dismiss="fileinput">
+																	 Remove
+																</a>
+															</div>
+														</div>
+														<div class="clearfix margin-top-10">
+															<span class="label label-danger">
+																 NOTE!
+															</span>
+															<span>
+																 Attached image thumbnail is supported in Latest Firefox, Chrome, Opera, Safari and Internet Explorer 10 only
+															</span>
+														</div>
+													</div>
+													<div class="margin-top-10">
+														<a href="#" class="btn green">
+															 Submit
+														</a>
+														<a href="#" class="btn default">
+															 Cancel
+														</a>
+													</div>
+												</form>
+											</div>
+											<div id="tab_3-3" class="tab-pane">
+												<form action="#">
+													<div class="form-group">
+														<label class="control-label">Current Password</label>
+														<input type="password" class="form-control">
+													</div>
+													<div class="form-group">
+														<label class="control-label">New Password</label>
+														<input type="password" class="form-control">
+													</div>
+													<div class="form-group">
+														<label class="control-label">Re-type New Password</label>
+														<input type="password" class="form-control">
+													</div>
+													<div class="margin-top-10">
+														<a href="#" class="btn green">
+															 Change Password
+														</a>
+														<a href="#" class="btn default">
+															 Cancel
+														</a>
+													</div>
+												</form>
+											</div>
+											<div id="tab_4-4" class="tab-pane">
+												<form action="#">
+													<table class="table table-bordered table-striped">
+													<tbody><tr>
+														<td>
+															 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus..
+														</td>
+														<td>
+															<label class="uniform-inline">
+															<div class="radio"><span><input type="radio" name="optionsRadios1" value="option1"></span></div>
+															Yes </label>
+															<label class="uniform-inline">
+															<div class="radio"><span class="checked"><input type="radio" name="optionsRadios1" value="option2" checked=""></span></div>
+															No </label>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															 Enim eiusmod high life accusamus terry richardson ad squid wolf moon
+														</td>
+														<td>
+															<label class="uniform-inline">
+															<div class="checker"><span><input type="checkbox" value=""></span></div> Yes </label>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															 Enim eiusmod high life accusamus terry richardson ad squid wolf moon
+														</td>
+														<td>
+															<label class="uniform-inline">
+															<div class="checker"><span><input type="checkbox" value=""></span></div> Yes </label>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															 Enim eiusmod high life accusamus terry richardson ad squid wolf moon
+														</td>
+														<td>
+															<label class="uniform-inline">
+															<div class="checker"><span><input type="checkbox" value=""></span></div> Yes </label>
+														</td>
+													</tr>
+													</tbody></table>
+													<!--end profile-settings-->
+													<div class="margin-top-10">
+														<a href="#" class="btn green">
+															 Save Changes
+														</a>
+														<a href="#" class="btn default">
+															 Cancel
+														</a>
+													</div>
+												</form>
+											</div>
+										</div>
+									</div>
+									<!--end col-md-9-->
+								</div>
+							</div>
+							<!--end tab-pane-->
+							<div class="tab-pane" id="tab_1_4">
+								<div class="row-custom">
+									<div class="col-md-custom">
+										<div class="add-portfolio">
+											<a href="#" class="btn icn-only green">
+												 Add a new Project <i class="m-icon-swapright m-icon-white"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+								<!--end add-portfolio-->
+								<div class="row-custom portfolio-block">
+									<div class="col-md-5">
+										<div class="portfolio-text">
+											<img src="assets/img/profile/portfolio/logo_metronic.jpg" alt="">
+											<div class="portfolio-text-info">
+												<h4>Glyn.in - Mobilising innovation games</h4>
+												<p>
+													 Glyn.in (pronounced glee-ning) is a mobile app to capture and annotate work processes, and to discuss and decide on aspects of these processes that could be improved.
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-2">
+										<div class="portfolio-btn">
+											<a href="#" class="btn bigicn-only">
+												<span>
+													 Manage
+												</span>
+											</a>
+										</div>
+									</div>
+								</div>
+								<!--end row-->
+								<div class="row-custom portfolio-block">
+									<div class="col-md-5 col-sm-12 portfolio-text">
+										<img src="assets/img/profile/portfolio/logo_azteca.jpg" alt="">
+										<div class="portfolio-text-info">
+											<h4>Rapid Turbine</h4>
+											<p>
+												 The Sharing Turbine design project is based on the digitalization of working and learning tasks for apprentices in the construction industry in Germany.
+											</p>
+										</div>
+									</div>
+									<div class="col-md-2 col-sm-12 portfolio-btn">
+										<a href="#" class="btn bigicn-only">
+											<span>
+												 Manage
+											</span>
+										</a>
+									</div>
+								</div>
+								<!--end row-->
+								<div class="row-custom portfolio-block">
+									<div class="col-md-5 portfolio-text">
+										<img src="assets/img/profile/portfolio/logo_metropolia.png" alt="">
+										<div class="portfolio-text-info">
+											<h4>Application development project course held in Helsinki Metropolia University of Applied Sciences 2013</h4>
+											<p>
+												 The "Application Development Project" course includes students from 4 studying programs: media engineering, industrial management, communications and information technology.
+											</p>
+										</div>
+									</div>
+									<div class="col-md-2 portfolio-btn">
+										<a href="#" class="btn bigicn-only">
+											<span>
+												 Manage
+											</span>
+										</a>
+									</div>
+								</div>
+								<!--end row-->
+							</div>
+							<!--end tab-pane-->
+							<div class="tab-pane" id="tab_1_6">
+								<div class="row">
+									<div class="col-md-3">
+										<ul class="ver-inline-menu tabbable margin-bottom-10">
+											<li class="active">
+												<a data-toggle="tab" href="#tab_1">
+													<i class="fa fa-briefcase"></i> Best way to set up safety fences
+												</a>
+												<span class="after">
+												</span>
+											</li>
+											<li>
+												<a data-toggle="tab" href="#tab_2">
+													<i class="fa fa-group"></i> Leveling the bottom of a trench
+												</a>
+											</li>
+											<li>
+												<a data-toggle="tab" href="#tab_3">
+													<i class="fa fa-leaf"></i> Best tool for losing the casing on a LB44 drill
+												</a>
+											</li>
+
+										</ul>
+									</div>
+                                    <div class="col-md-9">
+										<div class="tab-content">
+											<div id="tab_1" class="tab-pane active">
+												<div  class="panel-group">
+												<!-- Start of tab_1 -->
+												<div style="position: relative; overflow: hidden; width: auto; height: 435px;" class="slimScrollDiv">
+													<div class="scroller" style="height: 435px; overflow: hidden; width: auto;" data-always-visible="1" data-rail-visible1="1">
+														<ul class="chats">
+															<li class="in">
+																<img class="avatar img-responsive" alt="" src="assets_ltb/img/profile-Gilbert.jpg">
+																<div class="message">
+																	<span class="arrow">
+																	</span>
+																	<a href="#" class="name">
+																		 Gilbert
+																	</a>
+																	<span class="datetime">
+																		 at April 16, 2014 11:09
+																	</span>
+																	<span class="body">
+																	Hey, I have a small issue about how to correctly set up a safety fence, do I need to brace it if there is a good chance of it getting knocked over?
+																	</span>
+																</div>
+															</li>
+															<li class="out">
+																<img class="avatar img-responsive" alt="" src="assets_ltb/img/Melanie.png">
+																<div class="message">
+																	<span class="arrow">
+																	</span>
+																	<a href="#" class="name">
+																		 Melanie
+																	</a>
+																	<span class="datetime">
+																		 at April 16, 2014 11:55
+																	</span>
+																	<span class="body">
+																	Depends on the situation, if its not critical then no, you don't need to brace it. A fence that's braced will take more damage when it gets hit. But if it is critical then you must brace it.
+																	</span>
+																</div>
+															</li>
+														</ul>
+													</div><div style="background: none repeat scroll 0% 0% rgb(187, 187, 187); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; height: 287.576px;" class="slimScrollBar"></div><div style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: none repeat scroll 0% 0% rgb(234, 234, 234); opacity: 0.2; z-index: 90; right: 1px;" class="slimScrollRail"></div></div>
+													<div class="chat-form">
+														<div class="input-cont">
+															<input class="form-control" placeholder="Type a message here..." type="text">
+														</div>
+														<div class="btn-cont">
+															<span class="arrow">
+															</span>
+															<a href="" class="btn blue icn-only">
+																<i class="fa fa-check icon-white"></i>
+															</a>
+														</div>
+													</div>
+												<!-- End of tab_1 -->
+												</div>
+											</div>
+											<div id="tab_2" class="tab-pane">
+												<div class="panel-group">
+												<!-- Start of tab_2 -->
+												<div style="position: relative; overflow: hidden; width: auto; height: 435px;" class="slimScrollDiv">
+													<div class="scroller" style="height: 435px; overflow: hidden; width: auto;" data-always-visible="1" data-rail-visible1="1">
+														<ul class="chats">
+														<li class="out">
+																<img class="avatar img-responsive" alt="" src="assets_ltb/img/Melanie.png">
+																<div class="message">
+																	<span class="arrow">
+																	</span>
+																	<a href="#" class="name">
+																		Melanie
+																	</a>
+																	<span class="datetime">
+																		 at at Feb 5, 2014 15:14
+																	</span>
+																	<span class="body">
+																		Is there some way to level out the bottom of a trench quicker than using shoveling and patting?	
+																	</span>
+																</div>
+															</li>
+															<li class="in">
+																	<img class="avatar img-responsive" alt="" src="assets_ltb/img/profile-Gilbert.jpg">
+																<div class="message">
+																	<span class="arrow">
+																	</span>
+																	<a href="#" class="name">
+																		 Gilbert
+																	</a>
+																	<span class="datetime">
+																		 at Feb 5, 2014 15:28
+																	</span>
+																	<span class="body">
+																		You could digging abit deeper, then backfill a few mill with sand, then use a jig vs. the bottom of the trench and side panels.
+																	</span>
+																</div>
+															</li>
+															<li class="out">
+																<img class="avatar img-responsive" alt="" src="assets_ltb/img/pekka-portrait.png">
+																<div class="message">
+																	<span class="arrow">
+																	</span>
+																	<a href="#" class="name">
+																		 Pekka
+																	</a>
+																	<span class="datetime">
+																		 at Feb 5, 2014 15:28
+																	</span>
+																	<span class="body">
+																		Or get the site surveyor to do it...
+																	</span>
+																</div>
+															</li>
+														</ul>
+													</div><div style="background: none repeat scroll 0% 0% rgb(187, 187, 187); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; height: 287.576px;" class="slimScrollBar"></div><div style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: none repeat scroll 0% 0% rgb(234, 234, 234); opacity: 0.2; z-index: 90; right: 1px;" class="slimScrollRail"></div></div>
+													<div class="chat-form">
+														<div class="input-cont">
+															<input class="form-control" placeholder="Type a message here..." type="text">
+														</div>
+														<div class="btn-cont">
+															<span class="arrow">
+															</span>
+															<a href="" class="btn blue icn-only">
+																<i class="fa fa-check icon-white"></i>
+															</a>
+														</div>
+													</div>
+												<!-- End of tab_2 -->
+												</div>
+											</div>
+											<div id="tab_3" class="tab-pane">
+												<div class="panel-group">
+												<!-- Start of tab_3 -->
+												<div style="position: relative; overflow: hidden; width: auto; height: 435px;" class="slimScrollDiv">
+													<div class="scroller" style="height: 435px; overflow: hidden; width: auto;" data-always-visible="1" data-rail-visible1="1">
+														<ul class="chats">
+															<li class="in">
+																<img class="avatar img-responsive" alt="" src="assets_ltb/img/profile-Gilbert.jpg">
+																<div class="message">
+																	<span class="arrow">
+																	</span>
+																	<a href="#" class="name">
+																		 Gilbert
+																	</a>
+																	<span class="datetime">
+																		 at Jan 10, 2014 09:40
+																	</span>
+																	<span class="body">
+																		Casing is really on tight, can't seem to loosen it off! 
+																	</span>
+																</div>
+															</li>
+															<li class="out">
+																<img class="avatar img-responsive" alt="" src="assets_ltb/img/pekka-portrait.png">
+																<div class="message">
+																	<span class="arrow">
+																	</span>
+																	<a href="#" class="name">
+																		 Pekka
+																	</a>
+																	<span class="datetime">
+																		 at Jan 10, 2014 10:12
+																	</span>
+																	<span class="body">
+																		What tool are you using?
+																	</span>
+																</div>
+															</li>
+															<li class="in">
+																<img class="avatar img-responsive" alt="" src="assets_ltb/img/profile-Gilbert.jpg">
+																<div class="message">
+																	<span class="arrow">
+																	</span>
+																	<a href="#" class="name">
+																		 Gilbert
+																	</a>
+																	<span class="datetime">
+																		 at Jan 10, 2014 10:25
+																	</span>
+																	<span class="body">
+																		Hand wrench.
+																	</span>
+																</div>
+															</li>
+															<li class="out">
+																<img class="avatar img-responsive" alt="" src="assets_ltb/img/pekka-portrait.png">
+																<div class="message">
+																	<span class="arrow">
+																	</span>
+																	<a href="#" class="name">
+																		 Pekka
+																	</a>
+																	<span class="datetime">
+																		 at Jan 10, 2014 10:30
+																	</span>
+																	<span class="body">
+																		Ach So! What you need to do is use a sledgehammer + a wrench to get enough force. You should be able to slacken it off then.
+																	</span>
+																</div>
+															</li>
+														</ul>
+													</div><div style="background: none repeat scroll 0% 0% rgb(187, 187, 187); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; height: 287.576px;" class="slimScrollBar"></div><div style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: none repeat scroll 0% 0% rgb(234, 234, 234); opacity: 0.2; z-index: 90; right: 1px;" class="slimScrollRail"></div></div>
+													<div class="chat-form">
+														<div class="input-cont">
+															<input class="form-control" placeholder="Type a message here..." type="text">
+														</div>
+														<div class="btn-cont">
+															<span class="arrow">
+															</span>
+															<a href="" class="btn blue icn-only">
+																<i class="fa fa-check icon-white"></i>
+															</a>
+														</div>
+													</div>
+													
+												<!-- End of tab_3 -->
+												</div>
+											</div>
+									
+									</div>
+								</div>
+								</div>
+							</div>
+							<!--end tab-pane-->
+							<div class="tab-pane" id="tab_1_8">
+								<!-- BEGIN FILTER -->
+								<div class="filter-v1 margin-top-10">
+									<ul class="mix-filter">
+										<li class="filter active" data-filter="all">
+											 All
+										</li>
+										<li class="filter" data-filter="category_1">
+											 Mine
+										</li>
+										<li class="filter" data-filter="category_2">
+											 Subscribed
+										</li>
+									</ul>
+									<div class="row-collection mix-grid thumbnails">
+										<div class="col-md-44 mix category_1 mix_all" style="display: block; opacity: 1;">
+											<div class="mix-inner">
+                                                <a class="example-image-link" href="assets_ltb/img/topic.jpg" data-lightbox="example-1">
+                                                    <img class="img-responsive example-image" src="assets_ltb/img/topic.jpg" alt="image-1" />
+                                                </a>
+											</div>
+										</div>
+										<div class="col-md-44 mix category_2 mix_all" style="display: block; opacity: 1;">
+											<div class="mix-inner">
+												<a href="collection-1.html">
+                                                    <img class="img-responsive" src="assets_ltb/img/HS-845-1.jpg" alt="">
+                                                </a>
+											</div>
+										</div>
+                                        <div class="col-md-44 mix category_2 mix_all" style="display: block; opacity: 1;">
+											<div class="mix-inner">
+												<a href="collection-2.html">
+                                                    <img class="img-responsive" src="assets_ltb/img/Rotary-Drilling-Rig-6.jpg" alt="">
+                                                </a>
+											</div>
+										</div>
+								</div>
+								<!-- END FILTER -->
+							</di>
+						</div>
+                            <!--end tab-pane-->
+						</div>
+					</div>
+					<!--END TABS-->
+				</div>
+			</div>
+			<!-- END PAGE CONTENT-->
+		</div>
+	</div>
+	<!-- END CONTENT -->
+</div>
+<!-- END CONTAINER -->
+
+<!-- BEGIN FOOTER -->
+<div class="footer">
+    <div class="footer-inner">
+         2014 &copy; Learning Layers. Design based on Metronic.
+    </div>
+    <div class="footer-tools">
+        <span class="go-top">
+            <i class="fa fa-angle-up"></i>
+        </span>
+    </div>
+</div>
+<!-- END FOOTER -->
+
+<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+
+<!-- BEGIN CORE PLUGINS -->
+
+<!--[if lt IE 9]>
+<script src="assets/plugins/respond.min.js"></script>
+<script src="assets/plugins/excanvas.min.js"></script> 
+<![endif]-->
+
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/lightbox.js"></script>
+
+
+<script src="assets/plugins/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+<!-- IMPORTANT! Load jquery-ui-1.10.3.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+<script src="assets/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+<script src="assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="assets/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+<script src="assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="assets/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+<script src="assets/plugins/jquery.cokie.min.js" type="text/javascript"></script>
+<script src="assets/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
+<!-- END CORE PLUGINS -->
+
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+<script type="text/javascript" src="assets/plugins/bootstrap-fileinput/bootstrap-fileinput.js"></script>
+<script type="text/javascript" src="assets/plugins/jquery-mixitup/jquery.mixitup.min.js"></script>
+<!-- END PAGE LEVEL PLUGINS -->
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+<script src="assets/scripts/core/app.js"></script>
+<script src="assets/scripts/custom/portfolio.js"></script>
+<!-- END PAGE LEVEL SCRIPTS -->
+
+<script>
+jQuery(document).ready(function() {       
+   // initiate layout and plugins
+    App.init();
+    Portfolio.init();
+});
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48091512-2', 'glyn.in');
+  ga('send', 'pageview');
+</script>
+
+<script> 
+    $(function(){
+      $("#includeTopNavbar").load("snippets/top-navbar.html"); 
+    });
+</script> 
+
+<script>
+    $(function(){
+      $("#includeSidebarMenu").load("snippets/sidebar-menu.html"); 
+    });
+</script> 
+<!-- END JAVASCRIPTS -->
+
+</body>
+<!-- END BODY -->
+
+</html>

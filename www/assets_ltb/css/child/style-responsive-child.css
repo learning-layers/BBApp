@@ -43,7 +43,13 @@
  	Page header
  	***/
  	.header.navbar {
- 		padding: 0 20px 0 0px;
+ 		padding: 0 5px 0 0px;
+ 		position: fixed; 		
+ 		clear: both;
+ 	}
+ 	
+ 	.header.navbar.ios {
+ 		padding: 20px 5px 0 0px;
  		position: fixed; 		
  		clear: both;
  	}

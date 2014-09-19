@@ -45,12 +45,23 @@
     <link rel="shortcut icon" href="favicon.ico"/>
     <script type="text/javascript" src="js/	jquery.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/readJson.js"></script>
-	
-	<script>
-		$( document ).ready(function() {
-			var aux = document.getElementById("example");
-			aux.innerHTML = readJsonSubTiles(1);
-		});
+
+    <script>
+        $(document).ready(function () {
+            var aux0 = document.getElementById("navigationbar");
+            var aux = document.getElementById("example");
+
+            var iOS = false,
+		    p = navigator.platform;
+            if (p === 'iPad' || p === 'iPhone' || p === 'iPod') {
+                aux0.className = aux0.className + " ios";
+                aux.style.paddingTop = "30px";
+                aux.innerHTML = readJsonSubTiles(1);
+            }
+            else {
+                aux.innerHTML = readJsonSubTiles(1);
+            }
+        });
 	</script>
 	
 </head>
@@ -59,7 +70,7 @@
 <body class="page-header-fixed page-sidebar-closed">
     
 <!-- BEGIN HEADER -->
-<div class="header navbar navbar-fixed-top">
+<div class="header navbar navbar-fixed-top" id="navigationbar">
     
     <!-- BEGIN TOP NAVIGATION BAR -->
     <div id="includeTopNavbar"></div>

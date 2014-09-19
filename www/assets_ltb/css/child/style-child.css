@@ -53,13 +53,18 @@
  */
 .header.navbar {
   width: 100%; 
-  padding: 0 20px 0 20px;
+  padding: 0px 5px 0 20px;
   margin: 0;
   border: 0px;
   padding: 0px 0px 0px 0px; 
   box-shadow: none;
   height: 44px; 
   min-height: 44px;
+}
+
+.header.navbar.ios {
+  padding: 20px 5px 0 20px;
+  height: 64px;
 }
 
 .backbar 
@@ -87,6 +92,20 @@
   display: block; 
 }
 
+.header.navbar-ios .navbar-nav > li.dropdown > a:last-child {
+    padding-right: 15px;
+}
+
+.header.navbar-ios .navbar-nav > li.dropdown .dropdown-toggle {
+  margin: 0px;
+  padding: 13px 20px 7px 15px;
+}
+
+.header.navbar-ios .navbar-nav {
+  margin-right: 5px;
+  display: block; 
+}
+
 
 /*
  * Placing the logo and resizing it so it fits into the navbar
@@ -96,6 +115,7 @@
   margin-top: -10px;
   width: 65%;
 }
+
 
 /*
  * Override the  width of the logo container
@@ -131,11 +151,12 @@ body {
     margin-right: auto;
     background-color: black;
 }
-
+.tiles .inner.ios {
+    padding: 30px 5px 5px 0px;
+}
 .tiles .inner .tile {
     display: inline-block;
 }
-
 
 @media (min-width: 280px) {
     .tiles .inner{
@@ -145,6 +166,12 @@ body {
 
 @media (min-width: 320px) {
     .tiles .inner{
+        width: 270px;
+    }
+}
+
+@media (min-width: 320px) {
+    .inner-tiles{
         width: 270px;
     }
 }
