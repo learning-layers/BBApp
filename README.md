@@ -20,7 +20,7 @@ Create a new phonegap project.
 ``` phonegap create LearningToolbox ```
 ``` phonegap local plugin add https://github.com/phonegap-build/BarcodeScanner.git ```
 
-Then copy the folders ``` www ``` and ``` plugins ``` inside and copy inside ``` www ``` the following assets from the folder  ```metronic_v2.0.2\admin\template\assets```:
+Then copy the folders ``` www ``` and ``` res ``` inside your project and the following assets from the folder  ```metronic_v2.0.2\admin\template\assets``` inside  ``` www ```:
    - All files from ```css``` to ```Learning Toolbox\www\assets\css```
    - All files from ```img``` to ```Learning Toolbox\www\assets\img```
    - All files from ```scripts``` to ```Learning Toolbox\www\assets\scripts```
