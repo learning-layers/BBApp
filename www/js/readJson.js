@@ -1,3 +1,20 @@
+	function readJsonSuggestions() {
+		var a = "";
+		$.ajax({
+			url: "suggestions.json",
+			dataType: "json",
+			async: false,
+			success: function(data) {
+				for(var i in data.suggestions) {
+					a += "<tr><td>"+data.suggestions[i].subject+"</td>";
+					a += "<td>"+data.suggestions[i].nature+"</td>";
+					a += "<td><span class=\"label label-sm label-info\">"+data.suggestions[i].state+"</span></td></tr>";
+				}
+			}
+		});
+		return a;
+	};
+
 	function readJsonTiles() {
 		var a = "";
 		$.ajax({
