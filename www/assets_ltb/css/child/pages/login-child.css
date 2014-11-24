@@ -24,6 +24,21 @@
  * Author: Gilbert Peffer
  */
 
+ .login {
+  background-color: #000 !important;
+}
+ 
+ .login .content {
+  background-color:#fff; 
+  width: 360px;
+  margin: 0 auto; 
+  margin-bottom: 0px;
+  padding: 30px;  
+  padding-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 0px;
+}
+ 
 .login .content .input-icon {
   border-left: 2px solid red !important;
 }
@@ -32,3 +47,15 @@
   border-left: 2px solid red !important;
 }
 
+@media (max-width:420px) { 
+	.login .content {
+	background-color: #fff;
+	width: 260px;
+	margin: 0 auto;
+	margin-bottom: 0px;
+	padding: 30px;
+	padding-top: 20px;
+	padding-top: 20px;
+	padding-bottom: 0px;
+	}
+}

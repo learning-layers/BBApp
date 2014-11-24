@@ -31,7 +31,7 @@
     <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <link href="assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
     <!-- END GLOBAL MANDATORY STYLES -->
-		
+    
     <!-- BEGIN THEME STYLES -->
     <link href="assets/css/style-metronic.css" rel="stylesheet" type="text/css"/>
     <link href="assets_ltb/css/child/style-child.css" rel="stylesheet" type="text/css"/>
@@ -43,8 +43,9 @@
     <script src="assets/plugins/jquery-1.10.2.min.js" type="text/javascript"></script>
     <link rel="shortcut icon" href="favicon.ico"/>    
 	<script type="text/javascript" src="js/	jquery.js"></script>
-	<script type="text/javascript" charset="utf-8" src="js/cordova.js"></script>
+	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/readJson.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/launchApp.js"></script>
 
     <script>
         $(document).ready(function () {
@@ -62,6 +63,18 @@
                 aux.innerHTML = readJsonTiles();
             }
         });
+	</script>
+	
+	<script>
+	    function openApp2() {
+		    navigator.startApp.start("com.dropbox.android", function (message) { /* success */
+			console.log(message); // => OK
+			},
+			function (error) { /* error */
+			    window.open('https://play.google.com/store/apps/details?id=com.dropbox.android', '_system');
+				console.log('47', error);
+			});
+		}
 	</script>
 	
 	<script>
