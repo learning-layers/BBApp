@@ -1,0 +1,315 @@
+/* 
+    Created on : 15-okt-2014, 11:48:52
+    Author     : Raymond Elferink
+*/
+
+.tiles {
+  /* margin-right: -5%; */
+  /* padding: 5% 0 0 5%; */
+  /* width:258px; */
+  /* height:355px; */
+
+  height: auto;
+width: auto;
+  overflow: scroll;
+}
+
+.fake {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.tiles.tiles-black{
+    background-color: #000;
+}
+
+.tiles:before, .tiles:after {
+  display: table;
+  content: " ";
+}
+.tiles:after {
+  clear: both;
+}
+.tiles .tile {
+  display: block;
+  position: relative;
+  float: left;
+  height: 0px;
+  width: 45% !important;
+  padding-bottom: 45%;
+  margin: 2.5%;
+  overflow: hidden;
+  /*border: 4px solid transparent;*/
+  cursor: pointer;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 300;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  
+}
+
+.tiles .tile:after, .tiles .tile:before {
+  content: "";
+  float: left;
+}
+.tiles .tile.tile-full {
+  width: 95% !important;
+  padding-bottom: 0px;
+  height: 1000px;
+}
+
+.tiles .tile.double {
+  width: 95% !important;
+}
+.tiles .tile.double-down {
+  padding-bottom: 95% !important;
+}
+.tiles .tile.double-down i {
+  margin-top: 95px;
+}
+.tiles .tile:hover {
+  border-color: #aaa !important;
+}
+.tiles .tile:active, .tiles .tile.selected {
+  border-color: #ccc !important;
+}
+.tiles .tile.selected .corner:after,
+.tiles .tile.tile-full .corner:after{
+  content: "";
+  display: inline-block;
+  border-left: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+  border-right: 40px solid #ccc;
+  position: absolute;
+  top: -3px;
+  right: -3px;
+}
+/*.tiles .tile.selected .check:after {
+  content: "";
+  font-family: FontAwesome;
+  font-size: 13px;
+  content: "\f00c";
+  display: inline-block;
+   position: absolute; 
+  top: 2px;
+  right: 2px;
+}
+.tiles .tile .check:after {
+  content: "";
+  font-family: FontAwesome;
+  font-size: 13px;
+  content: "\f044";
+  display: inline-block;
+   position: absolute; 
+  top: 2px;
+  right: 2px;
+}*/
+.tiles .tile .close:after {
+  content: "";
+  font-family: FontAwesome;
+  font-size: 13px;
+  content: "\f00d";
+  /*display: inline-block;*/
+   position: absolute; 
+  top: 2px;
+  right: 2px;
+}
+.tiles .tile.icon {
+  padding: 0;
+}
+.tiles .tile.image .tile-body {
+  padding: 0 !important;
+}
+.tiles .tile.image .tile-body > img {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  max-width: 100%;
+}
+.tiles .tile.image .tile-body h3 {
+  display: inline-block;
+}
+.tiles .tile .tile-body {
+  /* height: 100%; */
+  vertical-align: top;
+  padding: 10px 10px;
+  overflow: hidden;
+  position: absolute;
+  font-weight: 400;
+  font-size: 12px;
+  color: #000000;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+.tiles .tile .tile-body p {
+  font-weight: 400;
+  font-size: 13px;
+  color: #000000;
+  color: #ffffff;
+  line-height: 20px;
+  overflow: hidden;
+}
+.tiles .tile .tile-body p:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+.tiles .tile .tile-body p:active {
+  color: rgba(0, 0, 0, 0.4);
+}
+.tiles .tile .tile-body p:hover {
+  color: #ffffff;
+}
+.tiles .tile .tile-body img {
+  float: left;
+  margin-right: 10px;
+}
+.tiles .tile .tile-body img.pull-right {
+  float: right !important;
+  margin-left: 10px;
+  margin-right: 0px;
+}
+
+.tiles .tile .tile-body > .title{
+   font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.tiles .tile .tile-body > .content {
+  display: inline-block;
+}
+
+.tiles .tile .contentpage {
+  display: inline-block;
+  background-color: #fff;
+  color: #000;
+}
+.tiles .tile .tile-body > i {
+  /* margin-top: 10px; */
+  display: block;
+  font-size: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+.tiles.tiletypes .tile .tile-body > i {
+  margin-top: 12px;
+  display: block;
+  font-size: 45px;
+  line-height: 45px;
+  text-align: center;
+}
+.tiles .tile .tile-body h1,
+.tiles .tile .tile-body h2,
+.tiles .tile .tile-body h3,
+.tiles .tile .tile-body h4,
+.tiles .tile .tile-body h5,
+.tiles .tile .tile-body h6,
+.tiles .tile .tile-body p {
+  padding: 0;
+  margin: 0;
+  line-height: 14px;
+}
+.tiles .tile .tile-body h1:hover,
+.tiles .tile .tile-body h2:hover,
+.tiles .tile .tile-body h3:hover,
+.tiles .tile .tile-body h4:hover,
+.tiles .tile .tile-body h5:hover,
+.tiles .tile .tile-body h6:hover,
+.tiles .tile .tile-body p:hover {
+  color: #ffffff;
+}
+.tiles .tile .tile-body h3,
+.tiles .tile .tile-body h4 {
+  margin-bottom: 5px;
+}
+.tiles .tile .tile-object {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-height: 30px;
+  background-color: transparent;
+  *zoom: 1;
+}
+.tiles .tile .tile-object:before, .tiles .tile .tile-object:after {
+  display: table;
+  content: "";
+}
+.tiles .tile .tile-object:after {
+  clear: both;
+}
+.tiles .tile .tile-object > .name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  margin-right: 15px;
+  font-weight: 400;
+  font-size: 13px;
+  color: #ffffff;
+}
+.tiles .tile .tile-object > .name > i {
+  vertical-align: middle;
+  display: block;
+  font-size: 24px;
+  height: 18px;
+  width: 24px;
+}
+.tiles .tile .tile-object > .number {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 0;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  line-height: 14px;
+  margin-bottom: 8px;
+  margin-right: 10px;
+}
+
+.tile-red {
+  border-color: #d84a38 !important;
+  background-image: none !important;
+  background-color: #d84a38 !important;
+  color: white !important;
+}
+
+.tile-red .font-red {
+  color: #d84a38 !important;
+}
+
+.tile-purple {
+  border-color: #8e44ad !important;
+  background-image: none !important;
+  background-color: #8e44ad !important;
+  color: white !important;
+}
+
+.tile-purple .font-purple {
+  color: #8e44ad !important;
+}
+
+#scrollArea {
+  overflow: auto;
+  margin-top: 50px;
+}
+
+#bottom {
+  display: block;
+  margin-top: 2000px;
+}
+
+.item_topBar {
+    float: left;
+}
+
+.topBar {
+    width: 180px;
+    /* margin-top: 5px; */
+}

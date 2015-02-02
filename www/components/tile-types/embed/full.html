@@ -1,0 +1,25 @@
+<div ng-controller="embedFullController as FullCtrl">
+
+    <div class="tile tile-full tile-{{FullCtrl.tile.colour}}" >
+        <div class="corner" ></div>
+        <div class="close" ng-click="FullCtrl.tileClose($event)"></div>
+        
+        
+        <div id="content" class="tile-embed {{FullCtrl.content_class}}" {{FullCtrl.content_extra}} ng-bind-html="FullCtrl.tile.settings.htmlSafe"></div>
+        
+        <div class="tile-body">
+            <div class="title" title="{{FullCtrl.tile.settings.title}}">
+                {{FullCtrl.tile.settings.title | cut:true:50:' ...'}}
+            </div>
+            <div class="">
+                {{FullCtrl.tile.settings.description}}
+            </div>
+            
+        </div>
+        
+        
+        <div class="tile-object">  <!--class="tile-emulate-object"-->
+        </div>
+        
+    </div>
+</div>

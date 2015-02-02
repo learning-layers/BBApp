@@ -1,0 +1,12 @@
+<div ng-controller="embedMenuController as MSettingCtrl">
+
+    <div class="form-group">
+        <label class="control-label">Url</label>
+        <div class="input-group">
+            <input type="text" ng-model="MSettingCtrl.url" class="form-control">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button" ng-click="MSettingCtrl.findEmbed()">Embed</button>
+            </span>
+        </div>
+    </div>
+</div>

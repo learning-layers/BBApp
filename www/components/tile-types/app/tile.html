@@ -1,0 +1,15 @@
+<div class="corner" ng-show="!tilereadonly"></div>
+<div class="check"  ng-show="!tilereadonly" ng-click="TileCtrl.tileEdit($event)"></div>
+<div ng-click="TileCtrl.openApp()">
+    <div class="tile-body">
+        <i ng-show="{{tile.icon !== ''}}" class="fa fa-{{tile.icon}}"></i>
+    </div>
+    <div class="tile-object">  <!--class="tile-emulate-object"-->
+        <div class="name">
+            {{tile.name}}
+        </div>
+        <div class="number">
+            {{tile.number}}
+        </div>
+    </div>
+</div>

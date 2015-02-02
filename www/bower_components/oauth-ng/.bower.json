@@ -1,0 +1,37 @@
+{
+  "name": "oauth-ng",
+  "main": [
+    "dist/oauth-ng.js",
+    "dist/views/templates/default"
+  ],
+  "ignore": [
+    "app",
+    "test",
+    "bower.json",
+    "Gruntfile.js",
+    "karma.conf.js",
+    "package.json"
+  ],
+  "dependencies": {
+    "angular": "~1.2.26",
+    "ngstorage": "~0.3.0"
+  },
+  "devDependencies": {
+    "json3": "~3.2.4",
+    "es5-shim": "~2.0.8",
+    "timecop": "~0.1.1",
+    "bootstrap-sass": "~3.0.2",
+    "jquery": "~1.9.1",
+    "angular-mocks": "~1.2.26"
+  },
+  "homepage": "https://github.com/raymondelferink/oauth-ng",
+  "_release": "1f603d43dc",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "1f603d43dcf6b8f5656966622195713af053189c"
+  },
+  "_source": "https://github.com/raymondelferink/oauth-ng.git",
+  "_target": "master",
+  "_originalSource": "https://github.com/raymondelferink/oauth-ng.git"
+}

@@ -1,0 +1,12 @@
+<div ng-controller="navigateMenuController as MSettingCtrl">
+    <div class="form-group">
+        <label class="control-label">Screen</label>
+        <select ng-model="MSettingCtrl.selectedTile.settings.target" 
+                ng-options="screen.id as screen.name for screen in StackCtrl.state.stack.screens" 
+                ng-change="MSettingCtrl.targetChange('navTarget')"
+                class="form-control"
+                id="navTarget"></select>
+            
+        
+    </div>
+</div>

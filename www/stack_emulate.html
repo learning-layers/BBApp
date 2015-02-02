@@ -1,0 +1,13 @@
+<div style="height:100%; background-color: black" id="fake" class="fake">
+    <div ng-show="!StackCtrl.fullscreen">
+        <div id="scrollArea" ui-sortable="StackCtrl.sortableOptions" class="tiles tiles-black worksheet" ng-model="StackCtrl.state.tiles">
+
+            
+            <tile ng-repeat="tile in StackCtrl.state.tiles" tiletype="tile.type" tiletemplate="false" tile='tile' tileindex="$index" class="tile {{tile.size}} tile-{{tile.colour}}"></tile>
+            
+        </div>
+    </div>
+    <div id="scrollArea" class="tiles tiles-black" ng-show="StackCtrl.fullscreen">
+        <tile-full></tile-full>
+    </div>
+</div>
